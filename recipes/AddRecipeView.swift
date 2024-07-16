@@ -13,7 +13,7 @@ struct AddRecipeView: View {
     
     @State private var title = ""
     @State private var selectedImage: UIImage? = nil
-    @State private var ingredients = ""
+    @State private var ingredients: [String] = [""]
     @State private var instructions = ""
     @State private var showingImagePicker = false
     
@@ -42,15 +42,38 @@ struct AddRecipeView: View {
                     }
                 }
                 
-                Section(header: Text("Ingredients (comma separated)")) {
-                    TextField("Ingredients", text: $ingredients)
+                Section(header: Text("Ingredients")) {
+                    ForEach(ingredients.indices, id: \.self) { index in
+                        HStack {
+                            TextField("Ingredient", text: $ingredients[index])
+                            Button(action: {
+                                if ingredients.count > 1 {
+                                    ingredients.remove(at: index)
+                                }
+                            }) {
+                                Image(systemName: "minus.circle.fill")
+                                    .foregroundColor(.red)
+                            }
+                        }
+                    }
+                    Button(action: {
+                        ingredients.append("")
+                    }) {
+                        HStack {
+                            Image(systemName: "plus.circle.fill")
+                            Text("Add Ingredient")
+                        }
+                    }
                 }
+                
                 Section(header: Text("Instructions")) {
                     TextEditor(text: $instructions)
                 }
             }
             .navigationTitle("Add Recipe")
-            .navigationBarItems(trailing: Button("Save") {
+            .navigationBarItems(leading: Button("Cancel") {
+                presentationMode.wrappedValue.dismiss()
+            }, trailing: Button("Save") {
                 guard let selectedImage = selectedImage else { return }
                 
                 // Save the image to the app's document directory and get the file name
@@ -63,7 +86,7 @@ struct AddRecipeView: View {
                 let newRecipe = Recipe(
                     title: title,
                     imageName: imageName,
-                    ingredients: ingredients.components(separatedBy: ", "),
+                    ingredients: ingredients.filter { !$0.isEmpty },
                     instructions: instructions
                 )
                 recipes.append(newRecipe)
