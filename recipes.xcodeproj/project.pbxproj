@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17782DEF2C418401005B08C3 /* AddRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17782DEE2C418401005B08C3 /* AddRecipeView.swift */; };
+		17782DF12C46B6E3005B08C3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17782DF02C46B6E3005B08C3 /* ImagePicker.swift */; };
 		17BE63822C406B6F0066E58B /* recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BE63812C406B6F0066E58B /* recipes.swift */; };
 		17BE63842C406C210066E58B /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BE63832C406C210066E58B /* RecipeData.swift */; };
 		17BE63862C406C6C0066E58B /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BE63852C406C6C0066E58B /* RecipeDetailView.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17782DEE2C418401005B08C3 /* AddRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeView.swift; sourceTree = "<group>"; };
+		17782DF02C46B6E3005B08C3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		17BE63812C406B6F0066E58B /* recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipes.swift; sourceTree = "<group>"; };
 		17BE63832C406C210066E58B /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
 		17BE63852C406C6C0066E58B /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				17BE63812C406B6F0066E58B /* recipes.swift */,
 				17BE63832C406C210066E58B /* RecipeData.swift */,
 				17BE63852C406C6C0066E58B /* RecipeDetailView.swift */,
+				17782DEE2C418401005B08C3 /* AddRecipeView.swift */,
+				17782DF02C46B6E3005B08C3 /* ImagePicker.swift */,
 			);
 			path = recipes;
 			sourceTree = "<group>";
@@ -314,6 +320,8 @@
 			files = (
 				17C481382C3CB88F00905B4C /* ContentView.swift in Sources */,
 				17BE63862C406C6C0066E58B /* RecipeDetailView.swift in Sources */,
+				17782DEF2C418401005B08C3 /* AddRecipeView.swift in Sources */,
+				17782DF12C46B6E3005B08C3 /* ImagePicker.swift in Sources */,
 				17BE63842C406C210066E58B /* RecipeData.swift in Sources */,
 				17C481362C3CB88F00905B4C /* recipesApp.swift in Sources */,
 				17BE63822C406B6F0066E58B /* recipes.swift in Sources */,
